@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Huulivoide/format_bytes.svg?branch=master)](https://travis-ci.com/Huulivoide/format_bytes)
+
 Format byte amounts in human readable form.
 
 ## Usage
