@@ -30,8 +30,8 @@ typedef AmountToString = String Function(double amount);
 /// * 0 <= [minDecimals] <= [maxDecimals]
 /// * [maxPrecision] == -1 or 1 <= [maxPrecision]
 ///
-AmountToString createPrecisionFormatter(int minDecimals, int maxDecimals,
-    int maxPrecision, String locale) {
+AmountToString createPrecisionFormatter(
+    int minDecimals, int maxDecimals, int maxPrecision, String locale) {
   if (minDecimals < 0) {
     throw ArgumentError.value(
         minDecimals, 'minDecimals', 'Expected positive value.');
@@ -72,7 +72,8 @@ String _formatString(double amount, AmountToString amountToString,
       .replaceFirst('%unit', unit);
 }
 
-String _formatSafeParams(num amount,
+String _formatSafeParams(
+    num amount,
     String locale,
     String formatString,
     String separator,
@@ -171,14 +172,14 @@ String _formatSafeParams(num amount,
 ///
 String format(num amount,
     {String locale = 'en',
-      String formatString = defaultFormatString,
-      String separator = defaultSeparator,
-      AmountToString customAmountTransformer,
-      int minDecimals = 0,
-      int maxDecimals = 2,
-      int maxPrecision = -1,
-      Unit unit = Unit.auto,
-      UnitType unitType = UnitType.binary}) {
+    String formatString = defaultFormatString,
+    String separator = defaultSeparator,
+    AmountToString customAmountTransformer,
+    int minDecimals = 0,
+    int maxDecimals = 2,
+    int maxPrecision = -1,
+    Unit unit = Unit.auto,
+    UnitType unitType = UnitType.binary}) {
   if (amount == null) throw ArgumentError.notNull('amount');
   if (locale == null) throw ArgumentError.notNull('locale');
   if (formatString == null) throw ArgumentError.notNull('formatString');

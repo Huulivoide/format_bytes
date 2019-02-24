@@ -50,42 +50,37 @@ class Unit {
   /// in the case of [Unit.kibibyte].
   const Unit(this.name, this.multiplier, this.type);
 
-  static const auto = const Unit('auto', 0, UnitType.decimal);
-  static const byte = const Unit('byte', 1, UnitType.decimal);
+  static const auto = Unit('auto', 0, UnitType.decimal);
+  static const byte = Unit('byte', 1, UnitType.decimal);
 
-  static const kilobyte = const Unit('kilobyte', 1000, UnitType.decimal);
-  static const megabyte = const Unit('megabyte', 1000000, UnitType.decimal);
-  static const gigabyte = const Unit('gigabyte', 1000000000, UnitType.decimal);
-  static const terabyte =
-      const Unit('terabyte', 1000000000000, UnitType.decimal);
-  static const petabyte =
-      const Unit('petabyte', 1000000000000000, UnitType.decimal);
-  static const exabyte =
-      const Unit('exabyte', 1000000000000000000, UnitType.decimal);
+  static const kilobyte = Unit('kilobyte', 1000, UnitType.decimal);
+  static const megabyte = Unit('megabyte', 1000000, UnitType.decimal);
+  static const gigabyte = Unit('gigabyte', 1000000000, UnitType.decimal);
+  static const terabyte = Unit('terabyte', 1000000000000, UnitType.decimal);
+  static const petabyte = Unit('petabyte', 1000000000000000, UnitType.decimal);
+  static const exabyte = Unit('exabyte', 1000000000000000000, UnitType.decimal);
   static const zettabyte =
-      const Unit('zettabyte', 1000000000000000000000, UnitType.decimal);
-  static const yottabyte = const Unit(
+      Unit('zettabyte', 1000000000000000000000, UnitType.decimal);
+  static const yottabyte = Unit(
       'yottabyte',
       // Suppress analyzer error (with .0) about possible integer overflow.
       // There is no overflow in this particular case.
       1000000000000000000000000.0,
       UnitType.decimal);
 
-  static const kibibyte = const Unit('kibibyte', 1024, UnitType.binary);
-  static const mebibyte = const Unit('mebibyte', 1048576, UnitType.binary);
-  static const gibibyte = const Unit('gibibyte', 1073741824, UnitType.binary);
-  static const tebibyte =
-      const Unit('tebibyte', 1099511627776, UnitType.binary);
-  static const pebibyte =
-      const Unit('pebibyte', 1125899906842624, UnitType.binary);
+  static const kibibyte = Unit('kibibyte', 1024, UnitType.binary);
+  static const mebibyte = Unit('mebibyte', 1048576, UnitType.binary);
+  static const gibibyte = Unit('gibibyte', 1073741824, UnitType.binary);
+  static const tebibyte = Unit('tebibyte', 1099511627776, UnitType.binary);
+  static const pebibyte = Unit('pebibyte', 1125899906842624, UnitType.binary);
   static const exbibyte =
-      const Unit('exbibyte', 1152921504606846976, UnitType.binary);
+      Unit('exbibyte', 1152921504606846976, UnitType.binary);
   static const zebibyte =
-      const Unit('zebibyte', 1180591620717411303424, UnitType.binary);
+      Unit('zebibyte', 1180591620717411303424, UnitType.binary);
   static const yobibyte =
-      const Unit('yobibyte', 1208925819614629174706176, UnitType.binary);
+      Unit('yobibyte', 1208925819614629174706176, UnitType.binary);
 
-  static const _binaryUnits = const [
+  static const _binaryUnits = [
     Unit.yobibyte,
     Unit.zebibyte,
     Unit.exbibyte,
@@ -97,7 +92,7 @@ class Unit {
     Unit.byte
   ];
 
-  static const _decimalUnits = const [
+  static const _decimalUnits = [
     Unit.yottabyte,
     Unit.zettabyte,
     Unit.exabyte,
@@ -109,7 +104,7 @@ class Unit {
     Unit.byte
   ];
 
-  static const _byName = const {
+  static const _byName = {
     'byte': Unit.byte,
     'kilobyte': Unit.kilobyte,
     'megabyte': Unit.megabyte,

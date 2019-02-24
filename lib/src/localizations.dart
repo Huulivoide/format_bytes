@@ -8,8 +8,8 @@ class Localization {
   const Localization(this.format, this.separator, this.units);
 }
 
-const _localizedUnits = const {
-  'en': const Localization('%amount%sep%unit', ' ', const {
+const _localizedUnits = {
+  'en': Localization('%amount%sep%unit', ' ', {
     Unit.byte: 'B',
     Unit.kilobyte: 'KB',
     Unit.megabyte: 'MB',
@@ -28,7 +28,7 @@ const _localizedUnits = const {
     Unit.zebibyte: 'ZiB',
     Unit.yobibyte: 'YiB'
   }),
-  'fi': const Localization('%amount%sep%unit', ' ', const {
+  'fi': Localization('%amount%sep%unit', ' ', {
     Unit.byte: 't',
     Unit.kilobyte: 'Kt',
     Unit.megabyte: 'Mt',
@@ -47,7 +47,7 @@ const _localizedUnits = const {
     Unit.zebibyte: 'ZiB',
     Unit.yobibyte: 'YiB'
   }),
-  'ru': const Localization('%amount%sep%unit', ' ', const {
+  'ru': Localization('%amount%sep%unit', ' ', {
     Unit.byte: 'б',
     Unit.kilobyte: 'Кб',
     Unit.megabyte: 'Мб',
