@@ -1,6 +1,6 @@
 name: format_bytes
-description: Format byte amounts in human readable form.
-version: 1.0.0
+description: Format byte amounts in human readable form. Includes support for localization and custom formatting options.
+version: 1.0.1
 homepage: https://github.com/Huulivoide/format_bytes
 repositiory: https://github.com/Huulivoide/format_bytes
 issue_tracker: https://github.com/Huulivoide/format_bytes/issues

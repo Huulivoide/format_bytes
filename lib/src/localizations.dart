@@ -76,4 +76,3 @@ Localization getLocalization(String locale) {
 
   return _localizedUnits['en'];
 }
-
