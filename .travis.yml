@@ -1,0 +1,6 @@
+language: dart
+dart:
+  - stable
+  - "2.1.0"
+dartanalyzer: true
+dartfmt: true
