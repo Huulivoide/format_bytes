@@ -16,7 +16,7 @@ void processDirectory(Directory dir) {
     return PathAndSize(entry.path, (await entry.stat()).size);
   }).asBroadcastStream();
 
-  var totalSize = statStream.fold(0, (total, entry) {
+  var totalSize = statStream.fold<int>(0, (total, entry) {
     return total + entry.size;
   });
 

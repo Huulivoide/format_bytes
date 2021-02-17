@@ -69,10 +69,10 @@ const _localizedUnits = {
 };
 
 Localization getLocalization(String locale) {
-  if (_localizedUnits.containsKey(locale)) return _localizedUnits[locale];
+  if (_localizedUnits.containsKey(locale)) return _localizedUnits[locale]!;
 
   var primary = locale.split('-')[0];
-  if (_localizedUnits.containsKey(primary)) return _localizedUnits[primary];
+  if (_localizedUnits.containsKey(primary)) return _localizedUnits[primary]!;
 
-  return _localizedUnits['en'];
+  return _localizedUnits['en']!;
 }
