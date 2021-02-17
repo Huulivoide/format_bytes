@@ -18,10 +18,6 @@ void main() {
       test('should not find auto', () {
         expect(() => Unit.find('auto'), throwsArgumentError);
       });
-
-      test('should not find null', () {
-        expect(() => Unit.find(null), throwsArgumentError);
-      });
     });
 
     group('getBest(String for)', () {
@@ -65,7 +61,7 @@ void main() {
           Unit.yottabyte
         ].asMap().forEach((i, expectedUnit) {
           test('should return ${expectedUnit.name} for ${base.toInt()}^$i', () {
-            var unit = Unit.bestFor(pow(base, i), UnitType.decimal);
+            var unit = Unit.bestFor(pow(base, i) as double, UnitType.decimal);
             expect(unit.name, expectedUnit.name);
           });
         });
@@ -96,7 +92,7 @@ void main() {
           Unit.yobibyte
         ].asMap().forEach((i, expectedUnit) {
           test('should return ${expectedUnit.name} for ${base.toInt()}^$i', () {
-            var unit = Unit.bestFor(pow(base, i), UnitType.binary);
+            var unit = Unit.bestFor(pow(base, i) as double, UnitType.binary);
             expect(unit.name, expectedUnit.name);
           });
         });

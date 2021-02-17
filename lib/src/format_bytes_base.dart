@@ -77,7 +77,7 @@ String _formatSafeParams(
     String locale,
     String formatString,
     String separator,
-    AmountToString customAmountTransformer,
+    AmountToString? customAmountTransformer,
     int minDecimals,
     int maxDecimals,
     int maxPrecision,
@@ -174,22 +174,12 @@ String format(num amount,
     {String locale = 'en',
     String formatString = defaultFormatString,
     String separator = defaultSeparator,
-    AmountToString customAmountTransformer,
+    AmountToString? customAmountTransformer,
     int minDecimals = 0,
     int maxDecimals = 2,
     int maxPrecision = -1,
     Unit unit = Unit.auto,
     UnitType unitType = UnitType.binary}) {
-  if (amount == null) throw ArgumentError.notNull('amount');
-  if (locale == null) throw ArgumentError.notNull('locale');
-  if (formatString == null) throw ArgumentError.notNull('formatString');
-  if (separator == null) throw ArgumentError.notNull('separator');
-  if (minDecimals == null) throw ArgumentError.notNull('minDecimals');
-  if (maxDecimals == null) throw ArgumentError.notNull('maxDecimals');
-  if (maxPrecision == null) throw ArgumentError.notNull('maxPrecision');
-  if (unit == null) throw ArgumentError.notNull('unit');
-  if (unitType == null) throw ArgumentError.notNull('unitType');
-
   return _formatSafeParams(
       amount,
       locale,

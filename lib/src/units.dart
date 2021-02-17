@@ -153,8 +153,6 @@ class Unit {
       case UnitType.decimal:
         return _decimalUnits;
     }
-
-    return []; // Un reachable, but we need it to make dartanalazyer happy.
   }
 
   /// Determines the best unit for given amount and type.
