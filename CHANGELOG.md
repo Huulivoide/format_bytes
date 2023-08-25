@@ -1,4 +1,4 @@
-## 2.1
+## 2.1.0
 - Actually push to pub.dev
 - Update dependencies and enable compatability with dart 3
 
